@@ -1,3 +1,4 @@
+//! ⬇️ We are going to use the component as an client component because by default in the next js component will be used as an server side component
 "use client";
 
 import React, { useContext } from "react";
@@ -8,7 +9,8 @@ import { ThemeContext } from "@/Context/ThemeContext";
 const ThemeToggle = () => {
   const { theme, toggle } = useContext(ThemeContext);
 
-  console.log(theme);
+  // * ⬇️ This will be used for the check the condition for the theme toggler - this will be used temporarely
+  // console.log(theme);
 
   return (
     <div
@@ -20,16 +22,16 @@ const ThemeToggle = () => {
           : { backgroundColor: "white" }
       }
     >
-      <Image src="/sun.png" alt="sun" width={16} height={16} />
+      <Image src="/sun.png" alt="sun" width={18} height={15} />
       <div
         className={styles.ball}
         style={
           theme === "light"
-            ? { left: 1, background: "white" }
-            : { right: 1, background: "#0f172a" }
+            ? { left: 2, background: "white" }
+            : { right: 2, background: "#0f172a" }
         }
       ></div>
-      <Image src="/moon.png" alt="moon" width={16} height={16} />
+      <Image src="/moon.png" alt="moon" width={17} height={15} />
     </div>
   );
 };

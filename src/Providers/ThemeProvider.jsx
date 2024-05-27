@@ -1,23 +1,22 @@
+//! ⬇️ We are going to use the component as an client component because by default in the next js component will be used as an server side component
 "use client";
 
-import { ThemeContext } from '@/Context/ThemeContext';
-import React, { useContext, useEffect, useState } from 'react'
+import { ThemeContext } from "@/Context/ThemeContext";
+import React, { useContext, useEffect, useState } from "react";
 
-const ThemeProvider = ({children}) => {
-    const {theme} = useContext(ThemeContext);
-    const [mounted, setMounted] = useState(false);
+const ThemeProvider = ({ children }) => {
+  const { theme } = useContext(ThemeContext);
+  const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+  //! If you are using another browser then check the component will client component or not using useEffect
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if(mounted) {
-        return (
-            <div className={theme}>
-                {children}
-            </div>
-        )
-    }
-}
+  //* If its mounted then give its children
+  if (mounted) {
+    return <div className={theme}>{children}</div>;
+  }
+};
 
-export default ThemeProvider
+export default ThemeProvider;

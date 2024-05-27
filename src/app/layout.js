@@ -8,8 +8,9 @@ import ThemeProvider from "@/Providers/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Blog App",
-  description: "The best blog app!",
+  title: "DevBlog: The Developer's Hub",
+  description:
+    "Welcome to DevBlog, the premier destination for developers and tech enthusiasts alike. Whether you're a seasoned programmer or just starting your coding journey, DevBlog offers a rich platform for sharing knowledge, discovering new trends, and connecting with a vibrant community of like-minded individuals.",
 };
 
 export default function RootLayout({ children }) {
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <ThemeProvider>
             <div className="container">
+              {/* ⬇️ This wrapper will use to give the space to left and right of the app */}
               <div className="wrapper">
+                {" "}
                 <Navbar />
                 {children}
                 <Footer />

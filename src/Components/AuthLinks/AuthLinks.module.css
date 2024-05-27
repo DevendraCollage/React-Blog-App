@@ -1,18 +1,47 @@
+/* todo: Set the cursor to the pointer when hover on the link */
 .link {
   cursor: pointer;
 }
 
+/* todo: This is our CSS for burger menu in the mobile view */
 .burger {
   width: 20px;
   height: 16px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  display: none;
 }
 
+/* todo: This is the CSS for the create the button for the menu of the mobile view */
 .line {
   width: 100%;
-  height: 2%;
+  height: 15%;
   background-color: var(--textColor);
+}
+
+/* todo: This CSS is for the custom menu of the mobile view */
+.responsiveMenu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: var(--bg);
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 640px) {
+  .burger {
+    display: flex;
+  }
+
+  .link {
+    display: none;
+  }
 }
