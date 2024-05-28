@@ -24,7 +24,7 @@ const CategoryList = () => {
               height={32}
               className={styles.image}
             />
-            <span>style</span>
+            <span className="titleSpan">style</span>
           </div>
         </Link>
         {/* 2️⃣ fashion category */}

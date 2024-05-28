@@ -9,7 +9,7 @@ import { ThemeContext } from "@/Context/ThemeContext";
 const ThemeToggle = () => {
   const { theme, toggle } = useContext(ThemeContext);
 
-  // * ⬇️ This will be used for the check the condition for the theme toggler - this will be used temporarely
+  // * ⬇️ This will be used for the check the condition for the theme toggler - this will be used temporarily
   // console.log(theme);
 
   return (
@@ -22,7 +22,7 @@ const ThemeToggle = () => {
           : { backgroundColor: "white" }
       }
     >
-      <Image src="/sun.png" alt="sun" width={18} height={15} />
+      <Image src="/sun.png" alt="sun" width={15} height={14} />
       <div
         className={styles.ball}
         style={
